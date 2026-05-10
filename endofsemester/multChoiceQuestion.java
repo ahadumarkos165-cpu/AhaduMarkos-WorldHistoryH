@@ -19,9 +19,18 @@ public class multChoiceQuestion extends Question {
         this.answerList = Arrays.asList(answer, wrong1, wrong2, wrong3);
     }
 
-    public void askQuestion(int questionNumber) {
-        System.out.printf("Question %d: %s\n", questionNumber, question);
+    public void askQuestion(int testNumber) {
+        // testNumber is the number that the question appears as when program runs
+        // questionNumber (in QuestionList) is the number that the question is stored in
+        
+        System.out.printf("Question %d: %s\n", testNumber, question);
         List<String> sortedList = answerList.stream().sorted().toList();
-        sortedList.forEach(System.out::println);
+        sortedList.forEach(System.out::println); // sorts list, since constructor puts correct answer first
+
+        if (System.console().readLine().equalsIgnoreCase(Character.toString(answer.charAt(0)))) {
+            System.out.println("Correct!");
+        } else {
+            System.out.println("Incorrect. The correct answer was: " + answer);
+        }
     }
 }

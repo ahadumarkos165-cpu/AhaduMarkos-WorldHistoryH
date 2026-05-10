@@ -1,19 +1,22 @@
 // list of all questions and their answers
+
+import java.util.Arrays;
+import java.util.List;
+
 public class QuestionList {
-
-    public QuestionList() {
-
+    
+    public static Question getQuestion(int questionNumber) {
+        return questionList.get(questionNumber - 1);
     }
-    public Question getQuestion() {
-        return question1;
-    }
-    public Question question1 = new multChoiceQuestion(
+
+    public static Question question1 = new multChoiceQuestion (
         "Which factor helped cause World War II in Europe?",
         "C. The rise of Fascism in Europe",
-        
+
         "A. The spread of democracy",
         "B. Militarism and alliance system",
         "D. The League of Nations"
     );
-    
+
+    static List <Question> questionList = Arrays.asList(question1);   
 }
