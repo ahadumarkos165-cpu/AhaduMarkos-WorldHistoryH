@@ -1,3 +1,7 @@
+/** 
+ * The superclass for all questions.
+ * @implNote Do not create an object of this class; all questions should be instances of subclasses.
+*/
 public class Question {
     String question;
     String answer;
@@ -15,8 +19,14 @@ public class Question {
         return question;
     }
 
-    public Boolean askQuestion(int questionNumber) {
-        System.out.printf("%d Question: %s\n", questionNumber, question);
-        return false;
+    /**
+     * Subclasses of this method should print the question and receive the response.
+     * Always override this method.
+     * @param testNumber
+     * @return True if the question was answered correctly, false otherwise
+     */
+    public Boolean askQuestion(int testNumber) {
+        System.out.printf("%d Question: %s\n", testNumber, question);
+        return null;
     }
 }

@@ -1,6 +1,9 @@
 import java.util.Arrays;
 import java.util.List;
 
+/** The {@code MultChoiceQuestion} class is used for, you guessed it, multiple choice questions
+ * @author Ahadu Markos
+ */
 public class MultChoiceQuestion extends Question {
     String question;
     String answer;
@@ -9,6 +12,23 @@ public class MultChoiceQuestion extends Question {
     String wrong3;
     List <String> answerList;
 
+    /**
+     * Constructor should be implemented as follows:
+     * <blockquote><pre>
+     * new MultChoiceQuestion (
+     *     question,
+     *     correctAnswer,
+     *     wrongAnswer,
+     *     wrongAnswer,
+     *     wrongAnswer
+     * );
+     * </pre></blockquote>
+     * @param question
+     * @param correctAnswer
+     * @param wrongAnswer 1 
+     * @param wrongAnswer 2
+     * @param wrongAnswer 3
+     */
     public MultChoiceQuestion(String Q, String A, String W1, String W2, String W3) {
         super(Q, A);
         this.question = Q;
@@ -20,6 +40,10 @@ public class MultChoiceQuestion extends Question {
         this.answerList = Arrays.asList(answer, wrong1, wrong2, wrong3);
     }
 
+    /**
+     * Prints the question and receives the response.
+     * @return True if the question was answered correctly, false otherwise
+     */
     public Boolean askQuestion(int testNumber) { 
         // testNumber is the number that the question appears as when program runs
         // questionNumber (in QuestionList) is the number that the question is stored in
