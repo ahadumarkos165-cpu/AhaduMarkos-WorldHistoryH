@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -80,9 +81,180 @@ public class HistoryQuestionList extends QuestionList {
     private static MatchingQuestion matchingQuestion = new MatchingQuestion (
         null,
         null,
-        null);
+        null
+    );
     
-    public static List<Question> rawHQList = Arrays.asList(
-        multQuestion1, multQuestion2, multQuestion3, multQuestion4, multQuestion5,
-        trueFalseQuestion1, trueFalseQuestion2, trueFalseQuestion3, trueFalseQuestion4, trueFalseQuestion5);
+
+    /** 
+     * Lukas did god, gold, glory better, sorry Sharon
+     * @author Sharon Cho
+     */
+    private static MultChoiceQuestion multSharon1 = new MultChoiceQuestion (
+        "What are the three G's of exploration?",
+        "C. Gold, God, Glory",
+        "A. Gardens, Gum, Gyms",
+        "B. Guns, Gunpowder, Gnomes",
+        "D. Glizzy, Goblin, Goulache"
+    );
+    private static MultChoiceQuestion multSharon2 = new MultChoiceQuestion (
+        "Which statement best explains why the Taíno were significant at the time of European contact?",
+        "A. They were the first Indigenous people Columbus encountered and had established agricultural societies.",
+        "B. They were tourists.",
+        "C. They had the money to trade with Europeans.",
+        "D. They had resources that were considered valuable."
+    );
+
+    private static MultChoiceQuestion multSharon3 = new MultChoiceQuestion (
+        "Which statement best describes the Columbian Exchange?",
+        "B. A two-way exchange of plants, animals, people, diseases, and ideas between the Americas and Afro-Eurasia",
+        "A. Colombia exchanged with other countries",
+        "C. The exchange of Columbians",
+        "The exchange of animals and foods between a city"
+    );
+
+    private static MultChoiceQuestion multSharon4 = new MultChoiceQuestion (
+        "Which statement best explains a major difference between Old World slavery and New World slavery?",
+        "A. Old World slavery was usually limited and not race-based, while New World slavery was racialized, lifelong, and central to plantation economies.",
+        "B. Slavery did not exist, so there is no Old or New World Slavery",
+        "C. Old World slavery was racialized, lifelong, and central to plantation economies, while New World slavery was usually limited and not race‑based",
+        "D. Both Old and New World slavery had no differences from each other."
+    );
+
+    private static MultChoiceQuestion multSharon5 = new MultChoiceQuestion (
+        "Which statement best describes the working conditions of enslaved people on plantations in the Americas?",
+        "D. Enslaved people typically worked long days in the fields, often 10–16 hours, and were organized into gangs supervised by overseers.",
+        "A. Enslaved people worked in fields, often 4-5 hours, and had no supervision",
+        "B. They had flexible hours, barely worked, and and many sick days off",
+        "C. They were good"
+    );
+
+    private static TrueFalseQuestion trueFalseSharon1 = new TrueFalseQuestion (
+        "The Atlantic Revolution were all impacted by Enlightenment ideas about liberty, equality, and natural rights.", 
+        true
+    );
+
+    private static TrueFalseQuestion trueFalseSharon2 = new TrueFalseQuestion (
+        "'Natural rights' during the Enlightenment referred to government‑granted privileges that could be taken away at any time.",
+        false
+    );
+
+    private static TrueFalseQuestion trueFalseSharon3 = new TrueFalseQuestion (
+        "Toussaint Louverture was a formerly enslaved man who became the leading military and political figure of the Haitian Revolution.",
+        true
+    );
+
+    private static TrueFalseQuestion trueFalseSharon4 = new TrueFalseQuestion (
+        "Nationalism has been one of the most influential forces shaping global politics and borders over the past two centuries.",
+        true
+    );
+
+    private static TrueFalseQuestion trueFalseSharon5 = new TrueFalseQuestion (
+        "As machines replaced manual labor, cities grew because people moved to urban areas for factory jobs.",
+        true
+    );
+    
+
+
+    private static MultChoiceQuestion multLukas1 = new MultChoiceQuestion (
+        "What are 3 reasons why Europeans begin 'exploring' other lands outside Europe?",
+        "C. God, Glory, Gold",
+        "A. Religion, Money, Colonization",
+        "B. Wealth, Fame, Power",
+        "D. Empowerment, Prosperity, Infamy"
+    );
+
+    private static MultChoiceQuestion multLukas2 = new MultChoiceQuestion (
+        "Where did the Triangular Trade system occur?",
+        "B. Atlantic Ocean",
+        "A. Pacific Ocean",
+        "C. Indian Ocean",
+        "D. Arctic Ocean"
+    );
+
+    private static MultChoiceQuestion multLukas3 = new MultChoiceQuestion (
+        "What were the three stages of the Trans-Atlantic Slave Trade?",
+        "A. Capture, Middle Passage, Arrival",
+        "B. The Coast, The Sea, The Land",
+        "C. The March, Transport, Distribution",
+        "D. Resistance, Conveyance, Acceptance"
+    );
+
+    private static MultChoiceQuestion multLukas4 = new MultChoiceQuestion (
+        "How did enslaved people cope with the inhumane conditions?",
+        "D. All of the above",
+        "A. Religion, Spirituals, and Worship Practices",
+        "B. Everyday Acts of Resistance",
+        "C. Organized Revolts and Escape"
+    );
+
+    private static MultChoiceQuestion multLukas5 = new MultChoiceQuestion (
+        "What were the new Banking Services of the Commercial Revolution?",
+        "A. Bills of Exchange, Letters of Credit, Joint Stock Companies",
+        "B. Credit Cards, Checks, Stocks",
+        "C. ATMs, Loans, Checking Accounts",
+        "D. Foreign Exchange, Investment Services, High-Yield Savings"
+    );
+
+    private static TrueFalseQuestion trueFalseLukas1 = new TrueFalseQuestion (
+        "Absolute monarchs in Europe believed their authority to rule was granted by God, a concept known as the divine right of kings.",
+        true
+    );
+
+    private static TrueFalseQuestion trueFalseLukas2 = new TrueFalseQuestion (
+        "A major cause of the Industrial Revolution beginning in Britain was the country's abundant supply of coal and iron.",
+        true
+    );
+
+    private static TrueFalseQuestion trueFalseLukas3 = new TrueFalseQuestion (
+        "The French Revolution was a peaceful transition of power that avoided violence and radical changes to society.",
+        false
+    );
+
+    private static TrueFalseQuestion trueFalseLukas4 = new TrueFalseQuestion (
+        "The Enlightenment idea of government by consent suggests that political leaders should only hold power if they have the approval of the people they govern.",
+        true
+    );
+
+    private static TrueFalseQuestion trueFalseLukas5 = new TrueFalseQuestion (
+        "The factory system improved production efficiency by having skilled artisans perform all steps of a product's creation in small, specialized workshops.",
+        false
+
+    );
+
+
+    /**
+     * @author Sharon Cho
+     */
+    private static List<Question> historySharonCho = new ArrayList<Question>();
+    /**
+     * @author Lukas Harris
+     */
+    private static List<Question> historyLukasHarris = new ArrayList<Question>();
+    private static List<Question> historyHunterJonston = new ArrayList<Question>();
+    /**
+     * @author Ahadu Markos
+     */
+    private static List<Question> historyAhaduMarkos = new ArrayList<Question>();
+    public static List<Question> rawHQList = new ArrayList<Question>();
+
+    static {
+        historySharonCho.addAll(Arrays.asList(
+            /*multSharon1,*/     // lukas did it better sorry
+            multSharon2, multSharon3, multSharon4, multSharon5,
+            trueFalseSharon1, trueFalseSharon2, trueFalseSharon3, trueFalseSharon4, trueFalseSharon5
+        ));
+
+        historyLukasHarris.addAll(Arrays.asList(
+            multLukas1, multLukas2, multLukas3, multLukas4, multLukas5,
+            trueFalseLukas1, trueFalseLukas2, trueFalseLukas3, trueFalseLukas4, trueFalseLukas5
+        ));
+
+        historyAhaduMarkos.addAll(Arrays.asList(
+            multQuestion1, multQuestion2, multQuestion3, multQuestion4, multQuestion5,
+            trueFalseQuestion1, trueFalseQuestion2, trueFalseQuestion3, trueFalseQuestion4, trueFalseQuestion5
+        ));
+        rawHQList.addAll(historySharonCho);
+        rawHQList.addAll(historyLukasHarris);
+        rawHQList.addAll(historyAhaduMarkos);
+    }
 }

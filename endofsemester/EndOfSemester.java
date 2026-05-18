@@ -16,7 +16,6 @@ public class EndOfSemester {
     static HistoryQuestionList historyQuestionList = new HistoryQuestionList(HistoryQuestionList.rawHQList);
     static Boolean testChemistry = false;
     static ChemistryQuestionList chemistryQuestionList = new ChemistryQuestionList(ChemistryQuestionList.rawCQList);
-    
     static Scanner scanner = new Scanner(System.in);
     static RandomGenerator randomGenerator = RandomGenerator.getDefault();
     
